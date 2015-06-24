@@ -1,0 +1,11 @@
+class FilterDataMainRoute extends NamedDataDataMainRoute {
+
+	name = 'filter';
+
+	baseName = 'Filter';
+	baseRoute = '{filters}';
+	baseController = 'filter_data_main_controller';
+
+	paramName = 'filter_url';
+
+}

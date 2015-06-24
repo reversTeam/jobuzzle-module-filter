@@ -1,0 +1,15 @@
+invokables:
+	filter_data_timeline_template : Data/Template/FilterDataTimelineTemplate
+
+	filter_data_search_template	: Data/Template/FilterDataSearchTemplate
+	filter_data_view_template	: Data/Template/FilterDataViewTemplate
+	filter_data_create_template	: Data/Template/FilterDataCreateTemplate
+	filter_data_update_template	: Data/Template/FilterDataUpdateTemplate
+	filter_data_delete_template	: Data/Template/FilterDataDeleteTemplate
+
+shared:
+	filter_data_search_template	: true
+	filter_data_view_template	: true
+	filter_data_create_template	: true
+	filter_data_update_template	: true
+	filter_data_delete_template	: true

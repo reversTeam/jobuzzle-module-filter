@@ -1,0 +1,7 @@
+class FilterDataSearchTemplate extends NamedDataDataSearchTemplate {
+
+	_viewClassName = 'FilterDataTemplateSearchView';
+	_type = 'Filter';
+	_route = 'filter';
+
+}

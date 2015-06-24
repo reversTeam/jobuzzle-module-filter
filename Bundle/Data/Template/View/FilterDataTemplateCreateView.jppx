@@ -1,0 +1,10 @@
+class FilterDataTemplateCreateView extends NamedDataDataTemplateCreateView {
+
+	_class = 'Filter';
+	_elementType = 'Filter';
+
+	display : function () {
+		return <div>Create Filter</div>;
+	}
+
+}

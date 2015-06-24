@@ -1,0 +1,10 @@
+class FilterDataTemplateUpdateView extends NamedDataDataTemplateUpdateView {
+
+	_class = 'filter';
+	_elementType = 'Filter';
+
+	display : function () {
+		return <div>Update Filter</div>;
+	}
+
+}

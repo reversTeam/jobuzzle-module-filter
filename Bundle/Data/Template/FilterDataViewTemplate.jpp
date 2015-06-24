@@ -1,0 +1,7 @@
+class FilterDataViewTemplate extends NamedDataDataViewTemplate {
+
+	_viewClassName = 'FilterDataTemplateViewView';
+	_type = 'Filter';
+	_route = 'filter';
+
+}

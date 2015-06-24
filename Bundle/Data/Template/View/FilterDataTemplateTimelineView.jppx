@@ -1,0 +1,47 @@
+class FilterDataTemplateTimelineView extends NamedDataDataTemplateTimelineView {
+
+	initialState : function () {
+		var dispatcher = serviceLocator.get('Dispatcher');
+		var store = serviceLocator.get('ServiceManager').get('store_manager_main_service');
+		var state = _super();
+
+		state.initParent = false;
+		if (!store.get(state.entity.getParentid()))
+			dispatcher.listen('Store:Element-'+ state.entity.getParentid() +':create', this, this.initParent.bind(this));
+
+		return state;
+	}
+
+	initParent : function () {
+		var dispatcher = serviceLocator.get('Dispatcher');
+
+		if (this.isMounted())
+			this.setState({ initParent : true });
+
+		dispatcher.unlisten('Store:Element-'+ this.state.entity.getParentid() +':create', this);		
+	}
+
+	update : function (datas) {
+		console.log(datas);
+	}
+
+	display : function () {
+		var entity = this.state.entity;
+		var parent = entity.getParent();
+		var filterName = entity.getName();
+		
+		if (parent && parent.getType() == 'Student') {
+			filterName = serviceLocator.get('Translator').translate('filter.'+ filterName);
+		}
+
+		return (
+			<div className="filter">
+				<div className="type">
+					{ filterName }
+				</div>
+				{ parent ? parent.displayTimeline() : null }
+			</div>
+		);
+	}
+
+}
