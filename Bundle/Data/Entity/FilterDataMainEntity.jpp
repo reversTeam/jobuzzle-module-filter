@@ -1,0 +1,42 @@
+class FilterDataMainEntity extends NamedDataDataMainEntity {
+
+	_type = 'Filter';
+	_templateTimeline = 'filter_data_timeline_template';
+	_templateMiniature = 'filter_data_miniature_template';
+
+	#default get, set for _salarymin;
+	#default get, set for _salarymax;
+
+	initialize : function () {
+		_super();
+
+		this._salarymin = undefined;
+		this._salarymax = undefined;
+	}
+
+	hydrate : function (datas) {
+		_super(datas);
+
+		if (datas.salarymin)
+			this.setSalarymin(datas.salarymin);
+		if (datas.salarymax)
+			this.setSalarymax(datas.salarymax);
+	}
+
+	search : function (params) {
+		var reg = new RegExp(params, 'i');
+		var translator = serviceLocator.get('Translator');
+		var translate = translator.translate('filter.'+ this.getName());
+		var empty = '{{ __EMPTY_TRANSLATION [filter.'+ this.getName() +']__ }}';
+
+		return (
+			_super(params)
+			|| (translate != empty && reg.test(translate))
+			|| reg.test(this.getSalarymax())
+			|| reg.test(this.getSalarymin())
+			|| (parseInt(this.getSalarymin()) < parseInt(params) && parseInt(this.getSalarymax()) > parseInt(params))
+			|| (this.getParent() && this.getParent().search(params))
+		);
+	}
+
+}

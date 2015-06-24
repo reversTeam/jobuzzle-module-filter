@@ -1,0 +1,7 @@
+class FilterDataDeleteTemplate extends NamedDataDataDeleteTemplate {
+
+	_viewClassName = 'FilterDataTemplateDeleteView';
+	_type = 'Filter';
+	_route = 'filter';
+
+}

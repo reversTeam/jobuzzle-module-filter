@@ -1,0 +1,7 @@
+class FilterDataUpdateTemplate extends NamedDataDataUpdateTemplate {
+
+	_viewClassName = 'FilterDataTemplateUpdateView';
+	_type = 'Filter';
+	_route = 'filter';
+
+}

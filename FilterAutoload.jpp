@@ -1,0 +1,9 @@
+#import (Config.path +'/Kernel/Autoload/MasterAutoload') = MasterAutoload;
+
+class FilterAutoload extends MasterAutoload {
+
+	confModuleName = 'Filter';
+
+}
+
+#export FilterAutoload;
