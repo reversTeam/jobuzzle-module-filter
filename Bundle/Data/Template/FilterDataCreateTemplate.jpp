@@ -1,0 +1,7 @@
+class FilterDataCreateTemplate extends NamedDataDataCreateTemplate {
+
+	_viewClassName = 'FilterDataTemplateCreateView';
+	_type = 'Filter';
+	_route = 'filter';
+
+}

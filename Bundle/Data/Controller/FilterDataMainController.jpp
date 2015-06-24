@@ -1,0 +1,5 @@
+class FilterDataMainController extends NamedDataDataMainController {
+
+	_serviceName = 'filter_data_main_service';
+
+}

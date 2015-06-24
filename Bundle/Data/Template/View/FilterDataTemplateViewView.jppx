@@ -1,0 +1,10 @@
+class FilterDataTemplateViewView extends NamedDataDataTemplateViewView {
+
+	_class = 'filter';
+	_elementType = 'Filter';
+
+	display : function () {
+		return <div>View Filter</div>;
+	}
+
+}

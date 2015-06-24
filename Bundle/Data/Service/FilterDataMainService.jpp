@@ -1,0 +1,6 @@
+class FilterDataMainService extends NamedDataDataMainService {
+
+	_type = 'filter';
+	_title = 'Filters';
+
+}
