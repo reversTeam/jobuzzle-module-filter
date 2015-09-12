@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 14:30:08
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-11 21:46:38
 **************************************************************/
 
 class FilterDataTimelineTemplate extends NamedDataDataTimelineTemplate {
@@ -16,13 +16,13 @@ class FilterDataTimelineTemplate extends NamedDataDataTimelineTemplate {
 	_type = 'Filter';
 	_route = 'filter';
 
-	onListen : function () {
+	public onListen : function () {
 		var dispatcher = _super();
 
 		return dispatcher;
 	}
 
-	update : function (trigger, datas) {
+	public update : function (trigger, datas) {
 		if (this.getVisibility())
 			this._view.update(datas);
 	}
