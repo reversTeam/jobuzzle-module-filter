@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 14:30:08
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-11 21:28:08
 **************************************************************/
 
 class FilterDataTemplateCreateView extends NamedDataDataTemplateCreateView {
@@ -15,7 +15,7 @@ class FilterDataTemplateCreateView extends NamedDataDataTemplateCreateView {
 	_class = 'Filter';
 	_elementType = 'Filter';
 
-	display : function () {
+	public display : function () {
 		return <div>Create Filter</div>;
 	}
 

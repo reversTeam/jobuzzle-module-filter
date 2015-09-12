@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 14:30:08
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-11 21:27:03
 **************************************************************/
 
 class FilterDataTemplateDeleteView extends NamedDataDataTemplateDeleteView {
@@ -15,7 +15,7 @@ class FilterDataTemplateDeleteView extends NamedDataDataTemplateDeleteView {
 	_class = 'filter';
 	_elementType = 'Filter';
 
-	display : function () {
+	public display : function () {
 		return <div>Delete Filter</div>;
 	}
 
