@@ -1,6 +1,18 @@
+/**************************************************************
+*     ####         #                               #          * Jobuzzle - Copyright All rights reserved
+*     ####         #                               #          *
+*       ##  #####  ######  #     # ####### ####### #  #####   * @Author: revers
+*       ## #     # #     # #     #      #       #  # #     #  *
+*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-08-08 11:12:48
+*       ## #     # #     # #     #    #       #    # #     #  *
+*       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
+*  ####### #     # #     # #     #  #       #      # #        *
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-12 00:08:22
+**************************************************************/
+
 class FilterDataTemplateTimelineView extends NamedDataDataTemplateTimelineView {
 
-	initialState : function () {
+	public initialState : function () {
 		var dispatcher = serviceLocator.get('Dispatcher');
 		var store = serviceLocator.get('ServiceManager').get('store_manager_main_service');
 		var state = _super();
@@ -16,16 +28,16 @@ class FilterDataTemplateTimelineView extends NamedDataDataTemplateTimelineView {
 		var dispatcher = serviceLocator.get('Dispatcher');
 
 		if (this.isMounted())
-			this.setState({ initParent : true });
+			this['setState']({ 'initParent' : true });
 
 		dispatcher.unlisten('Store:Element-'+ this.state.entity.getParentid() +':create', this);		
 	}
 
-	update : function (datas) {
+	public update : function (datas) {
 		console.log(datas);
 	}
 
-	display : function () {
+	public display : function () {
 		var entity = this.state.entity;
 		var parent = entity.getParent();
 		var filterName = entity.getName();

@@ -1,16 +1,28 @@
+/**************************************************************
+*     ####         #                               #          * Jobuzzle - Copyright All rights reserved
+*     ####         #                               #          *
+*       ##  #####  ######  #     # ####### ####### #  #####   * @Author: revers
+*       ## #     # #     # #     #      #       #  # #     #  *
+*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-08-08 11:12:48
+*       ## #     # #     # #     #    #       #    # #     #  *
+*       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
+*  ####### #     # #     # #     #  #       #      # #        *
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-11 21:46:38
+**************************************************************/
+
 class FilterDataTimelineTemplate extends NamedDataDataTimelineTemplate {
 
 	_viewClassName = 'FilterDataTemplateTimelineView';
 	_type = 'Filter';
 	_route = 'filter';
 
-	onListen : function () {
+	public onListen : function () {
 		var dispatcher = _super();
 
 		return dispatcher;
 	}
 
-	update : function (trigger, datas) {
+	public update : function (trigger, datas) {
 		if (this.getVisibility())
 			this._view.update(datas);
 	}
