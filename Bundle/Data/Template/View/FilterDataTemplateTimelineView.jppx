@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-12 00:08:22
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-14 10:07:31
 **************************************************************/
 
 class FilterDataTemplateTimelineView extends NamedDataDataTemplateTimelineView {
@@ -31,10 +31,6 @@ class FilterDataTemplateTimelineView extends NamedDataDataTemplateTimelineView {
 			this['setState']({ 'initParent' : true });
 
 		dispatcher.unlisten('Store:Element-'+ this.state.entity.getParentid() +':create', this);		
-	}
-
-	public update : function (datas) {
-		console.log(datas);
 	}
 
 	public display : function () {

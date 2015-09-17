@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-11 21:46:38
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-14 10:06:08
 **************************************************************/
 
 class FilterDataTimelineTemplate extends NamedDataDataTimelineTemplate {
@@ -20,11 +20,6 @@ class FilterDataTimelineTemplate extends NamedDataDataTimelineTemplate {
 		var dispatcher = _super();
 
 		return dispatcher;
-	}
-
-	public update : function (trigger, datas) {
-		if (this.getVisibility())
-			this._view.update(datas);
 	}
 
 }
