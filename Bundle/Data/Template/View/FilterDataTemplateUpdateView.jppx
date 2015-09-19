@@ -7,16 +7,12 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-11 21:27:13
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-19 15:43:24
 **************************************************************/
 
 class FilterDataTemplateUpdateView extends NamedDataDataTemplateUpdateView {
 
 	_class = 'filter';
 	_elementType = 'Filter';
-
-	public display : function () {
-		return <div>Update Filter</div>;
-	}
 
 }

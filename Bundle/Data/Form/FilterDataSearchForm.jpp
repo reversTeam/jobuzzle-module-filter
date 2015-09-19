@@ -3,18 +3,16 @@
 *     ####         #                               #          *
 *       ##  #####  ######  #     # ####### ####### #  #####   * @Author: revers
 *       ## #     # #     # #     #      #       #  # #     #  *
-*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-08-08 11:12:48
+*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-09-19 15:34:46
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-19 15:37:20
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-19 15:39:10
 **************************************************************/
 
-class FilterDataUpdateTemplate extends NamedDataDataUpdateTemplate {
+class FilterDataSearchForm extends NamedDataDataSearchForm {
 
-	_viewClassName = 'FilterDataTemplateUpdateView';
-	_serviceName = 'filter_data_main_service';
-	_type = 'Filter';
-	_route = 'filter';
+	public _title = 'Search filter';
+	public _url = '/filter';
 
 }

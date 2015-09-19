@@ -7,12 +7,14 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 14:30:08
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-19 15:35:30
 **************************************************************/
 
 class FilterDataMainService extends NamedDataDataMainService {
 
 	_type = 'filter';
+	_entityType = 'Filter';
 	_title = 'Filters';
+	_fieldsetName = 'filter_data_fieldset_form';
 
 }
