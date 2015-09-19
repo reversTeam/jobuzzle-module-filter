@@ -1,0 +1,50 @@
+/**************************************************************
+*     ####         #                               #          * Jobuzzle - Copyright All rights reserved
+*     ####         #                               #          *
+*       ##  #####  ######  #     # ####### ####### #  #####   * @Author: revers
+*       ## #     # #     # #     #      #       #  # #     #  *
+*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-09-19 15:34:10
+*       ## #     # #     # #     #    #       #    # #     #  *
+*       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
+*  ####### #     # #     # #     #  #       #      # #        *
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-19 15:40:55
+**************************************************************/
+
+class FilterDataFieldsetForm extends NamedDataDataFieldsetForm {
+
+	public _formName = 'Filter';
+	public _createFormName = 'filter_data_create_form';
+	public _searchFormName = 'filter_data_search_form';
+	public _editFormName = 'filter_data_edit_form';
+
+	public _salaryMinDisplay = undefined;
+	public _salaryMaxDisplay = undefined;
+
+	public getElementsDisplay : function () {
+		var elementsDisplay = _super();
+
+		elementsDisplay['salarymin'] = this.getSalaryMinDisplay();
+		elementsDisplay['salarymax'] = this.getSalaryMaxDisplay();
+
+		return elementsDisplay;
+	}
+
+	public getSalaryMinDisplay : function () {
+		if (!this['_salaryMinDisplay']) {
+			this['_salaryMinDisplay'] = {};
+			this['_salaryMinDisplay']['type'] = 'Text';
+			this['_salaryMinDisplay']['label'] = 'Salary min';
+		}
+		return this['_salaryMinDisplay'];
+	}
+
+	public getSalaryMaxDisplay : function () {
+		if (!this['_salaryMaxDisplay']) {
+			this['_salaryMaxDisplay'] = {};
+			this['_salaryMaxDisplay']['type'] = 'Text';
+			this['_salaryMaxDisplay']['label'] = 'Salary max';
+		}
+		return this['_salaryMaxDisplay'];
+	}
+
+}
