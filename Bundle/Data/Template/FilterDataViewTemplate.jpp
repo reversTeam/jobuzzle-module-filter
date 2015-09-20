@@ -7,11 +7,12 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 14:30:08
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-19 20:44:43
 **************************************************************/
 
 class FilterDataViewTemplate extends NamedDataDataViewTemplate {
 
+	_serviceName = 'filter_data_main_service';
 	_viewClassName = 'FilterDataTemplateViewView';
 	_type = 'Filter';
 	_route = 'filter';

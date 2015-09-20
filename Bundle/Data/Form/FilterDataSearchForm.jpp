@@ -7,12 +7,12 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-19 15:39:10
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-20 12:02:05
 **************************************************************/
 
 class FilterDataSearchForm extends NamedDataDataSearchForm {
 
-	public _title = 'Search filter';
+	public _title = 'form.title.filter.search';
 	public _url = '/filter';
 
 }

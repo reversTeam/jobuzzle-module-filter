@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-19 15:40:55
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-20 11:58:19
 **************************************************************/
 
 class FilterDataFieldsetForm extends NamedDataDataFieldsetForm {
@@ -33,7 +33,7 @@ class FilterDataFieldsetForm extends NamedDataDataFieldsetForm {
 		if (!this['_salaryMinDisplay']) {
 			this['_salaryMinDisplay'] = {};
 			this['_salaryMinDisplay']['type'] = 'Text';
-			this['_salaryMinDisplay']['label'] = 'Salary min';
+			this['_salaryMinDisplay']['label'] = 'form.input.filter.salary_min';
 		}
 		return this['_salaryMinDisplay'];
 	}
@@ -42,7 +42,7 @@ class FilterDataFieldsetForm extends NamedDataDataFieldsetForm {
 		if (!this['_salaryMaxDisplay']) {
 			this['_salaryMaxDisplay'] = {};
 			this['_salaryMaxDisplay']['type'] = 'Text';
-			this['_salaryMaxDisplay']['label'] = 'Salary max';
+			this['_salaryMaxDisplay']['label'] = 'form.input.filter.salary_max';
 		}
 		return this['_salaryMaxDisplay'];
 	}
