@@ -7,12 +7,12 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-19 15:38:24
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-20 12:01:59
 **************************************************************/
 
 class FilterDataEditForm extends NamedDataDataEditForm {
 
-	public _title = 'Edit filter';
+	public _title = 'form.title.filter.edit';
 	public _url = '/filter/view/update';
 	public _paramNameRoute = 'filter_url';
 
