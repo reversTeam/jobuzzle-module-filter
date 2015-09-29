@@ -7,29 +7,29 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-19 23:20:55
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-29 10:16:12
 **************************************************************/
 
 class FilterDataTemplateViewView extends NamedDataDataTemplateViewView {
 
-	_class = 'filter';
-	_elementType = 'Filter';
+	public _class = 'filter';
+	public _elementType = 'Filter';
 
 	getUrl : function () {
 		var router = serviceLocator.get('Router');
 		var entity = this.state.entity;
 
 		return router.build('/filter/view/update',{
-			filter_url : entity.getUrl()
+			'filter_url' : entity.getUrl()
 		});
 	}
 
-	public display : function () {
-		var entity = this.state.entity;
-		// var entity = this._template.
-		// console.debug(this.getUrl());
+	// public display : function () {
+	// 	var entity = this.state['entity'];
+	// 	// var entity = this._template.
+	// 	// console.debug(this.getUrl());
 
-		return <div>View Filter</div>;
-	}
+	// 	return <div>View Filter</div>;
+	// }
 
 }
