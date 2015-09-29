@@ -7,12 +7,12 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 14:30:08
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-20 18:40:10
 **************************************************************/
 
 class FilterDataTemplateSearchView extends NamedDataDataTemplateSearchView {
 
-	_class = 'filter';
-	_elementType = 'Filter';
+	public _class = 'filter';
+	public _elementType = 'Filter';
 
 }

@@ -7,14 +7,14 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-19 15:37:20
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-20 18:44:54
 **************************************************************/
 
 class FilterDataUpdateTemplate extends NamedDataDataUpdateTemplate {
 
-	_viewClassName = 'FilterDataTemplateUpdateView';
-	_serviceName = 'filter_data_main_service';
-	_type = 'Filter';
-	_route = 'filter';
+	public _viewClassName = 'FilterDataTemplateUpdateView';
+	public _serviceName = 'filter_data_main_service';
+	public _type = 'Filter';
+	public _route = 'filter';
 
 }
