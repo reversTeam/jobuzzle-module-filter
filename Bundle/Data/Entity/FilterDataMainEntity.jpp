@@ -7,23 +7,20 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 14:30:08
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-20 18:39:13
 **************************************************************/
 
 class FilterDataMainEntity extends NamedDataDataMainEntity {
 
-	_type = 'Filter';
-	_templateTimeline = 'filter_data_timeline_template';
-	_templateMiniature = 'filter_data_miniature_template';
-
-	#default get, set for _salarymin;
-	#default get, set for _salarymax;
+	public _type = 'Filter';
+	public _templateTimeline = 'filter_data_timeline_template';
+	public _templateMiniature = 'filter_data_miniature_template';
 
 	initialize : function () {
 		_super();
 
-		this._salarymin = undefined;
-		this._salarymax = undefined;
+		this['_salarymin'] = undefined;
+		this['_salarymax'] = undefined;
 	}
 
 	hydrate : function (datas) {
@@ -51,4 +48,23 @@ class FilterDataMainEntity extends NamedDataDataMainEntity {
 		);
 	}
 
+	public getSalarymin : function () {
+		return this['_salarymin'];
+	}
+
+	public setSalarymin : function (salarymin) {
+		this['_salarymin'] = salarymin;
+
+		return this;
+	}
+
+	public getSalarymax : function () {
+		return this['_salarymax'];
+	}
+
+	public setSalarymax : function (salarymax) {
+		this['_salarymax'] = salarymax;
+
+		return this;
+	}
 }

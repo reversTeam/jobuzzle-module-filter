@@ -7,14 +7,14 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-19 15:37:17
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-20 18:40:50
 **************************************************************/
 
 class FilterDataSearchTemplate extends NamedDataDataSearchTemplate {
 
-	_viewClassName = 'FilterDataTemplateSearchView';
-	_serviceName = 'filter_data_main_service';
-	_type = 'Filter';
-	_route = 'filter';
+	public _viewClassName = 'FilterDataTemplateSearchView';
+	public _serviceName = 'filter_data_main_service';
+	public _type = 'Filter';
+	public _route = 'filter';
 
 }
