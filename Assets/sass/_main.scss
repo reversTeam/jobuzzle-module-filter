@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-19 20:38:13
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-30 22:52:44
 **************************************************************/
 
 div.filter.timeline {
@@ -17,6 +17,18 @@ div.filter.timeline {
 	background: rgba($primary_color, 0.8);
 	width: $timeline_entity_width;
 	height: $timeline_entity_height;
+
+	&.load {
+		div {
+			width: 56px;
+			height: 20px;
+			position : absolute;
+			left : 50%;
+			top : 50%;
+			margin-top: -10px;
+			margin-left : -28px;
+		}
+	}
 
 	div.type {
 		position: absolute;
