@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-30 22:48:57
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-01 16:35:26
 **************************************************************/
 
 class FilterDataTemplateTimelineView extends NamedDataDataTemplateTimelineView {
@@ -36,10 +36,9 @@ class FilterDataTemplateTimelineView extends NamedDataDataTemplateTimelineView {
 	public display : function () {
 		var router = serviceLocator.get('Router');
 		var entity = this.state['entity'];
-		this.getElementEntity(entity.getParentid());
 		var parent = entity.getParent();
 		var filterName = entity.getName();
-		var urlFilter = router.build('/filter/view', {'filter_url' : entity.getUrl()});
+		var urlFilter = router.entityRoute(entity);
 		
 		if (parent) {
 			var content = <div className="filter timeline">
