@@ -7,19 +7,12 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-20 18:44:47
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-02 12:01:55
 **************************************************************/
 
 class FilterDataTimelineTemplate extends NamedDataDataTimelineTemplate {
 
 	public _viewClassName = 'FilterDataTemplateTimelineView';
 	public _type = 'Filter';
-	public _route = 'filter';
-
-	public onListen : function () {
-		var dispatcher = _super();
-
-		return dispatcher;
-	}
 
 }

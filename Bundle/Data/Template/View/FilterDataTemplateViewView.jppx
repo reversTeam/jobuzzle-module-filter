@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-29 10:16:12
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-01 12:19:02
 **************************************************************/
 
 class FilterDataTemplateViewView extends NamedDataDataTemplateViewView {
@@ -19,7 +19,7 @@ class FilterDataTemplateViewView extends NamedDataDataTemplateViewView {
 		var router = serviceLocator.get('Router');
 		var entity = this.state.entity;
 
-		return router.build('/filter/view/update',{
+		return router.build('update',{
 			'filter_url' : entity.getUrl()
 		});
 	}
