@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-03 02:18:01
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-04 02:12:54
 **************************************************************/
 
 class FilterDataTemplateTimelineView extends NamedDataDataTemplateTimelineView {
@@ -38,9 +38,14 @@ class FilterDataTemplateTimelineView extends NamedDataDataTemplateTimelineView {
 		var entity = this.state['entity'];
 		var parent = entity.getParent();
 		var filterName = entity.getName();
+		var searchTemplate = this.getSearchTemplate();
+		var style = { 
+			width : searchTemplate.getEntityWidth(),
+			height : searchTemplate.getEntityHeight()
+		};
 		
 		if (parent) {
-			var content = <div className="filter timeline">
+			var content = <div className="filter timeline" style={style}>
 				<div className="type" data-url={this.getUrl()} onClick={this.link}>
 					{ filterName }
 				</div>
