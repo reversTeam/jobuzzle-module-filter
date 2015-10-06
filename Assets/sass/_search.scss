@@ -3,21 +3,15 @@
 *     ####         #                               #          *
 *       ##  #####  ######  #     # ####### ####### #  #####   * @Author: revers
 *       ## #     # #     # #     #      #       #  # #     #  *
-*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-08-08 11:12:48
+*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-10-06 10:14:51
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-06 10:35:52
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-06 10:35:57
 **************************************************************/
 
-class FilterDataSearchTemplate extends NamedDataDataSearchTemplate {
+div.entities.search.filter {
 
-	public _viewClassName = 'FilterDataTemplateSearchView';
-	public _serviceName = 'filter_data_main_service';
-	public _type = 'Filter';
-	public _route = 'filter';
-
-	public entityWidth = 300;
-	public entityHeight = 150;
+	
 
 }
