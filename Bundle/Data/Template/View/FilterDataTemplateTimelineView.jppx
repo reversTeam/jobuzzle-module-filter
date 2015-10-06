@@ -7,31 +7,10 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-04 02:12:54
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-05 23:03:33
 **************************************************************/
 
 class FilterDataTemplateTimelineView extends NamedDataDataTemplateTimelineView {
-
-	public initialState : function () {
-		var dispatcher = serviceLocator.get('Dispatcher');
-		var store = serviceLocator.get('ServiceManager').get('store_manager_main_service');
-		var state = _super();
-
-		state.initParent = false;
-		if (!store.get(state['entity'].getParentid()))
-			dispatcher.listen('Store:Element-'+ state['entity']['getParentid']() +':create', this, this.initParent.bind(this));
-
-		return state;
-	}
-
-	initParent : function () {
-		var dispatcher = serviceLocator.get('Dispatcher');
-
-		if (this.isMounted())
-			this['setState']({ 'initParent' : true });
-
-		dispatcher.unlisten('Store:Element-'+ this.state['entity']['getParentid']() +':create', this);		
-	}
 
 	public display : function () {
 		var router = serviceLocator.get('Router');
@@ -39,13 +18,9 @@ class FilterDataTemplateTimelineView extends NamedDataDataTemplateTimelineView {
 		var parent = entity.getParent();
 		var filterName = entity.getName();
 		var searchTemplate = this.getSearchTemplate();
-		var style = { 
-			width : searchTemplate.getEntityWidth(),
-			height : searchTemplate.getEntityHeight()
-		};
 		
 		if (parent) {
-			var content = <div className="filter timeline" style={style}>
+			var content = <div className="filter timeline">
 				<div className="type" data-url={this.getUrl()} onClick={this.link}>
 					{ filterName }
 				</div>
