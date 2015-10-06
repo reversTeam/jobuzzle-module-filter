@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-06 10:33:16
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-06 16:36:33
 **************************************************************/
 
 div.filter.timeline {
@@ -17,8 +17,9 @@ div.filter.timeline {
 	background: rgba($primary_color, 0.8);
 	width: 100%;
 	height: 100%;
-	padding: 10px;
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding : 10px;
 
 	&.load {
 		div {
