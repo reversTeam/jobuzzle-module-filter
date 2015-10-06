@@ -7,12 +7,21 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-02 12:01:55
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-06 13:01:38
 **************************************************************/
 
 class FilterDataTimelineTemplate extends NamedDataDataTimelineTemplate {
 
 	public _viewClassName = 'FilterDataTemplateTimelineView';
 	public _type = 'Filter';
+
+	onListen : function () {
+		var dispatcher = serviceLocator.get('Dispatcher');
+
+		dispatcher.listen('Store:Student:update', this, this.update.bind(this));
+		dispatcher.listen('Store:Company:update', this, this.update.bind(this));
+
+		return dispatcher;
+	}
 
 }
