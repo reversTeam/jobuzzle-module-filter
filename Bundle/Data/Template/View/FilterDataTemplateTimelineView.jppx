@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-06 16:31:22
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-06 20:56:48
 **************************************************************/
 
 class FilterDataTemplateTimelineView extends NamedDataDataTemplateTimelineView {
@@ -27,6 +27,9 @@ class FilterDataTemplateTimelineView extends NamedDataDataTemplateTimelineView {
 				</div>
 				<div className="parent name" data-url={parentUrl} onClick={this.link}>
 					{parent.getFirstname() +' '+ parent.getLastname()}
+				</div>
+				<div>
+					{entity.getSalarymin() +'k à '+ entity.getSalarymax() +'k' }
 				</div>
 			</div>
 		} else {
