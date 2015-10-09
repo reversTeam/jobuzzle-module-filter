@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-03 21:58:49
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-09 18:43:26
 **************************************************************/
 
 class FilterDataTemplateViewView extends NamedDataDataTemplateViewView {
@@ -20,10 +20,12 @@ class FilterDataTemplateViewView extends NamedDataDataTemplateViewView {
 		var entity = this.state['entity'];
 
 		return <div className="filter view">
-			View Filter
 			<div className="actions">
 				<i className="fa fa-tasks" data-url={router.entityRoute(entity, 'skilllink')} onClick={this.link}></i>
 				<i className="fa fa-pencil" data-url={this.getUrlEdit()} onClick={this.link}></i>
+			</div>
+			<div>
+				{ this.getHelper('DisplaySkillLink', { entity : entity }) }
 			</div>
 		</div>;
 	}
