@@ -1,0 +1,61 @@
+/**************************************************************
+*     ####         #                               #          * Jobuzzle - Copyright All rights reserved
+*     ####         #                               #          *
+*       ##  #####  ######  #     # ####### ####### #  #####   * @Author: revers
+*       ## #     # #     # #     #      #       #  # #     #  *
+*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-10-09 16:31:36
+*       ## #     # #     # #     #    #       #    # #     #  *
+*       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
+*  ####### #     # #     # #     #  #       #      # #        *
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-09 16:57:54
+**************************************************************/
+
+class FilterDataHelperDisplayView extends MasterHelperView {
+
+	initialState : function () {
+		var states = {};
+
+		states['filters'] = this.getFilters();
+
+		return states;
+	}
+
+	getFilters = function () {
+		var self = this;
+		var store = serviceLocator.get('ServiceManager').get('store_manager_main_service');
+		var router = serviceLocator.get('Router');
+		var filterCollection = store.getCollection('Filter');
+		var entity = this._template.getEntity();
+
+		var filters = filterCollection.filterByParentEntityRoute(entity);
+
+		if (!Object.keys(filters).length) {
+			store.request(router.entityRouteForApi(entity, 'filter'));
+		}
+
+		return filters;
+	}
+
+	displayFilters : function (filters) {
+		var self = this;
+		var keys = Object.keys(filters);
+		var entity = this._template.getEntity();
+
+		return keys.map(function (i) {
+			return <div>
+				{ filters[i].getSalarymin() +' / '+  filters[i].getSalarymax() }
+				<div>
+					{ self.getHelper('DisplaySkillLink', { entity : filters[i] }) }
+				</div>
+			</div>
+		});
+	}
+ 
+	display : function () {
+		var filters = this.state['filters'];
+
+		return <div>
+			{this.displayFilters(filters)}
+		</div>
+	}
+}

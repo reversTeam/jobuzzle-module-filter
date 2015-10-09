@@ -3,21 +3,30 @@
 *     ####         #                               #          *
 *       ##  #####  ######  #     # ####### ####### #  #####   * @Author: revers
 *       ## #     # #     # #     #      #       #  # #     #  *
-*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-08-08 11:12:48
+*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-10-09 16:31:16
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-09 18:39:32
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-09 16:33:43
 **************************************************************/
 
-class FilterDataSearchTemplate extends NamedDataDataSearchTemplate {
+class FilterDataDisplayHelper extends MasterHelper {
 
-	public _viewClassName = 'FilterDataTemplateSearchView';
-	public _serviceName = 'filter_data_main_service';
-	public _type = 'Filter';
-	public _route = 'filter';
+	_viewClassName = 'FilterDataHelperDisplayView';
 
-	public entityWidth = 300;
-	public entityHeight = 250;
+	initialize : function () {
+		_super();
+		this['_entity'] = undefined;
+	}
+
+	public getEntity : function () {
+		return this['_entity'];
+	}
+
+	public setEntity : function (entity) {
+		this['_entity'] = entity;
+
+		return this.entity;
+	}
 
 }
