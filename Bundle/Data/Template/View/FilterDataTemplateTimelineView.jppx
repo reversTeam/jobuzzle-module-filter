@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-06 20:56:48
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-09 18:15:44
 **************************************************************/
 
 class FilterDataTemplateTimelineView extends NamedDataDataTemplateTimelineView {
@@ -30,6 +30,9 @@ class FilterDataTemplateTimelineView extends NamedDataDataTemplateTimelineView {
 				</div>
 				<div>
 					{entity.getSalarymin() +'k à '+ entity.getSalarymax() +'k' }
+				</div>
+				<div>
+					{ this.getHelper('DisplaySkillLink', { entity : entity }) }
 				</div>
 			</div>
 		} else {
