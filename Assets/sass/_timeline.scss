@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-09 18:38:51
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-09 21:17:36
 **************************************************************/
 
 div.filter.timeline {
@@ -20,7 +20,20 @@ div.filter.timeline {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	padding : 10px;
-	overflow: hidden;
+
+	div.moreInfo {
+		text-align: center;
+		margin-left : -20px;
+
+		span.info {
+			margin-left : 20px;
+			i.fa {
+				color : $secondary_color;
+				margin-right: 5px;
+			}
+		}
+		
+	}
 
 	&.load {
 		div {
@@ -57,5 +70,20 @@ div.filter.timeline {
 		vertical-align: top;
 		line-height: 44px;
 		margin-left : 10px;
+		width: calc(100% - 55px);
+		white-space: nowrap;
+		overflow: hidden;
+		-o-text-overflow: ellipsis;
+		text-overflow: ellipsis;
+		height : 44px;
+	}
+
+	div.previewSkill {
+		height: 115px;
+		overflow: hidden;
+	}
+
+	div.centerButton {
+		margin-top : 10px;
 	}
 }
