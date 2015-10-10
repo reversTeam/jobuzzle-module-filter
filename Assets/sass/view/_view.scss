@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-10 17:01:52
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-10 23:38:54
 **************************************************************/
 
 div.filter.view {
@@ -17,6 +17,7 @@ div.filter.view {
 			width: 160px;
 			height: 190px;
 			background-color: rgba($primary_color, 0.7);
+			background-size: 100% 100%; 
 			display: inline-block;
 		}
 
