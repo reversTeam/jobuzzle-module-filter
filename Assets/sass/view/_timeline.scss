@@ -3,11 +3,11 @@
 *     ####         #                               #          *
 *       ##  #####  ######  #     # ####### ####### #  #####   * @Author: revers
 *       ## #     # #     # #     #      #       #  # #     #  *
-*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-10-06 10:14:28
+*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-10-10 16:47:11
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-10 03:09:56
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-10 23:06:01
 **************************************************************/
 
 div.filter.timeline {
@@ -81,6 +81,11 @@ div.filter.timeline {
 	div.previewSkill {
 		height: 120px;
 		overflow: hidden;
+
+		div.skilllinkContent {
+			opacity: 0;
+			@include animation('fadeIn 1s linear both');
+		}
 	}
 
 	div.centerButton {

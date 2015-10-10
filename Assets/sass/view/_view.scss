@@ -3,15 +3,37 @@
 *     ####         #                               #          *
 *       ##  #####  ######  #     # ####### ####### #  #####   * @Author: revers
 *       ## #     # #     # #     #      #       #  # #     #  *
-*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-10-06 10:14:51
+*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-10-10 16:48:53
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-06 10:35:57
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-10 17:01:52
 **************************************************************/
 
-div.entities.search.filter {
+div.filter.view {
 
-	
+	div.parent.view {
+		div.picture {
+			width: 160px;
+			height: 190px;
+			background-color: rgba($primary_color, 0.7);
+			display: inline-block;
+		}
 
+		div.nameProfile {
+			display: inline-block;
+			vertical-align: top;
+			margin-left: 20px;
+			color: rgba(15,9,44,0.7);
+			font-size: 26px;
+			font-weight: bold;
+		}
+	}
+
+	div.skilllinks {
+		margin-top : 20px;
+		padding: 10px;
+		background-color : rgba($primary_color, 0.6);
+		width: 50%;
+	}
 }

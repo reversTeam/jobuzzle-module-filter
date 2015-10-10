@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-10 03:01:10
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-10 20:44:17
 **************************************************************/
 
 class FilterDataSearchTemplate extends NamedDataDataSearchTemplate {
@@ -18,7 +18,7 @@ class FilterDataSearchTemplate extends NamedDataDataSearchTemplate {
 	public _route = 'filter';
 
 	public entityWidth = 300;
-	public entityHeight = 245;
+	public entityHeight = 255;
 	public _proportional = false;
 
 }
