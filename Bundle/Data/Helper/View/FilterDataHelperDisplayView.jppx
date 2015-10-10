@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-09 16:57:54
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-10 02:44:44
 **************************************************************/
 
 class FilterDataHelperDisplayView extends MasterHelperView {
@@ -15,7 +15,7 @@ class FilterDataHelperDisplayView extends MasterHelperView {
 	initialState : function () {
 		var states = {};
 
-		states['filters'] = this.getFilters();
+		states['entities'] = this.getFilters();
 
 		return states;
 	}
@@ -27,35 +27,43 @@ class FilterDataHelperDisplayView extends MasterHelperView {
 		var filterCollection = store.getCollection('Filter');
 		var entity = this._template.getEntity();
 
-		var filters = filterCollection.filterByParentEntityRoute(entity);
+		var entities = filterCollection.filterByParentEntityRoute(entity);
 
-		if (!Object.keys(filters).length) {
-			store.request(router.entityRouteForApi(entity, 'filter'));
-		}
+		if (!Object.keys(entities).length) {
+			var self = this;
+			store.request(router.entityRouteForApi(entity, 'filter'), {}, function (datas) {
+				entities = filterCollection.filterByParentEntityRoute(entity);
+				self._template.setReady(true);
+				self.setState({
+					'entities' : entities
+				})
+			});
+		} else
+			this._template.setReady(true);
 
-		return filters;
+		return entities;
 	}
 
-	displayFilters : function (filters) {
+	displayFilters : function (entities) {
 		var self = this;
-		var keys = Object.keys(filters);
+		var keys = Object.keys(entities);
 		var entity = this._template.getEntity();
 
 		return keys.map(function (i) {
 			return <div>
-				{ filters[i].getSalarymin() +' / '+  filters[i].getSalarymax() }
+				{ entities[i].getSalarymin() +' / '+  entities[i].getSalarymax() }
 				<div>
-					{ self.getHelper('DisplaySkillLink', { entity : filters[i] }) }
+					{ self.getHelper('DisplaySkillLink', { entity : entities[i] }) }
 				</div>
 			</div>
 		});
 	}
  
 	display : function () {
-		var filters = this.state['filters'];
+		var entities = this.state['entities'];
 
 		return <div>
-			{this.displayFilters(filters)}
+			{this.displayFilters(entities)}
 		</div>
 	}
 }

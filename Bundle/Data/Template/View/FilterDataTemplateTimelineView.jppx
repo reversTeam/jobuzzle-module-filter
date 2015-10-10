@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-09 21:25:38
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-10 00:33:07
 **************************************************************/
 
 class FilterDataTemplateTimelineView extends NamedDataDataTemplateTimelineView {
@@ -37,7 +37,11 @@ class FilterDataTemplateTimelineView extends NamedDataDataTemplateTimelineView {
 					</span>
 				</div>
 				<div className="previewSkill">
-					{ this.getHelper('DisplaySkillLink', { entity : entity, limit : 3 }) }
+					{ this.getHelper('DisplaySkillLink', {
+						entity : entity,
+						limit : 3,
+						parent : this._template
+					}) }
 				</div>
 				<div className="centerButton">
 					<button className="secondary" data-url={this.getUrl()} onClick={this.link}>Voir le profil</button>
