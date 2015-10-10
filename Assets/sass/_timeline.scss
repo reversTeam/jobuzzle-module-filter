@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-09 21:17:36
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-10 03:09:56
 **************************************************************/
 
 div.filter.timeline {
@@ -79,11 +79,15 @@ div.filter.timeline {
 	}
 
 	div.previewSkill {
-		height: 115px;
+		height: 120px;
 		overflow: hidden;
 	}
 
 	div.centerButton {
 		margin-top : 10px;
+	}
+
+	div.loader_content_view div.loader {
+		top : 50px;
 	}
 }
