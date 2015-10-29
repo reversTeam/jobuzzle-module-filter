@@ -7,10 +7,13 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-10 02:44:44
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-29 02:05:37
 **************************************************************/
 
 class FilterDataHelperDisplayView extends MasterHelperView {
+
+	public _collectionName = 'Filter';
+	public _routeForApi = 'filter';
 
 	initialState : function () {
 		var states = {};
@@ -24,14 +27,14 @@ class FilterDataHelperDisplayView extends MasterHelperView {
 		var self = this;
 		var store = serviceLocator.get('ServiceManager').get('store_manager_main_service');
 		var router = serviceLocator.get('Router');
-		var filterCollection = store.getCollection('Filter');
+		var filterCollection = store.getCollection(this.getCollectionName());
 		var entity = this._template.getEntity();
 
 		var entities = filterCollection.filterByParentEntityRoute(entity);
 
 		if (!Object.keys(entities).length) {
 			var self = this;
-			store.request(router.entityRouteForApi(entity, 'filter'), {}, function (datas) {
+			store.request(router.entityRouteForApi(entity, this.getRouteForApi()), {}, function (datas) {
 				entities = filterCollection.filterByParentEntityRoute(entity);
 				self._template.setReady(true);
 				self.setState({
@@ -51,7 +54,6 @@ class FilterDataHelperDisplayView extends MasterHelperView {
 
 		return keys.map(function (i) {
 			return <div>
-				{ entities[i].getSalarymin() +' / '+  entities[i].getSalarymax() }
 				<div>
 					{ self.getHelper('DisplaySkillLink', { entity : entities[i] }) }
 				</div>
@@ -65,5 +67,25 @@ class FilterDataHelperDisplayView extends MasterHelperView {
 		return <div>
 			{this.displayFilters(entities)}
 		</div>
+	}
+
+	public getCollectionName : function () {
+		return this['_collectionName'];
+	}
+
+	public setCollectionName : function (collectionName) {
+		this['_collectionName'] = collectionName;
+
+		return this;
+	}
+
+	public getRouteForApi : function () {
+		return this['_routeForApi'];
+	}
+
+	public setRouteForApi : function (routeForApi) {
+		this['_routeForApi'] = routeForApi;
+
+		return this;
 	}
 }
