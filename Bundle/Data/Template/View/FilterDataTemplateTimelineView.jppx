@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-10 00:33:07
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-03 16:39:33
 **************************************************************/
 
 class FilterDataTemplateTimelineView extends NamedDataDataTemplateTimelineView {
@@ -36,7 +36,7 @@ class FilterDataTemplateTimelineView extends NamedDataDataTemplateTimelineView {
 						<i className="fa fa-map-marker"></i>Paris
 					</span>
 				</div>
-				<div className="previewSkill">
+				<div className="description">
 					{ this.getHelper('DisplaySkillLink', {
 						entity : entity,
 						limit : 3,
