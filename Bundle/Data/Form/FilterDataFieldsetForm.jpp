@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-18 12:47:29
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-03 13:56:29
 **************************************************************/
 
 class FilterDataFieldsetForm extends NamedDataDataFieldsetForm {
@@ -18,7 +18,8 @@ class FilterDataFieldsetForm extends NamedDataDataFieldsetForm {
 	public _editFormName = 'filter_data_edit_form';
 
 	public _salaryMinDisplay = undefined;
-	public _salaryMaxDisplay = undefined;
+
+	public _salaryMinInput = undefined;
 
 	public getElementsDisplay : function () {
 		var elementsDisplay = _super();
@@ -28,6 +29,14 @@ class FilterDataFieldsetForm extends NamedDataDataFieldsetForm {
 		return elementsDisplay;
 	}
 
+	public getElementsInput : function () {
+		var elementsInput = _super();
+
+		elementsInput['salarymin'] = this.getSalaryMinInput();
+
+		return elementsInput;
+	}
+
 	public getSalaryMinDisplay : function () {
 		if (!this['_salaryMinDisplay']) {
 			this['_salaryMinDisplay'] = {};
@@ -35,6 +44,22 @@ class FilterDataFieldsetForm extends NamedDataDataFieldsetForm {
 			this['_salaryMinDisplay']['label'] = 'form.input.filter.salary_min';
 		}
 		return this['_salaryMinDisplay'];
+	}
+
+
+	public getSalaryMinInput : function () {
+		if (this['_salaryMinInput'] == undefined) {
+			this['_salaryMinInput'] = {};
+
+			this['_salaryMinInput']['required'] = false;
+
+			this['_salaryMinInput']['filters'] = [];
+			this['_salaryMinInput']['filters'][0] = {}
+			this['_salaryMinInput']['filters'][0]['name'] = 'Trim';
+			this['_salaryMinInput']['filters'][1] = {}
+			this['_salaryMinInput']['filters'][1]['name'] = 'Int';
+		}
+		return this['_salaryMinInput'];
 	}
 
 }
