@@ -1,0 +1,22 @@
+/**************************************************************
+*     ####         #                               #          * Jobuzzle - Copyright All rights reserved
+*     ####         #                               #          *
+*       ##  #####  ######  #     # ####### ####### #  #####   * @Author: revers
+*       ## #     # #     # #     #      #       #  # #     #  *
+*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-11-06 16:12:01
+*       ## #     # #     # #     #    #       #    # #     #  *
+*       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
+*  ####### #     # #     # #     #  #       #      # #        *
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-06 16:16:12
+**************************************************************/
+
+class FilterDataTemplateMiniatureView extends NamedDataDataTemplateMiniatureView {
+
+	/**
+	* Display miniature for baseuser
+	**/
+	public display : function () {
+		return <i className="fa fa-sliders"></i>;
+	}
+
+}
