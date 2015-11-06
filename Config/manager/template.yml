@@ -7,11 +7,12 @@
 #       ## #     # #     # #     #    #       #    # #     #  #
 #       ## #     # #     # #     #   #       #     # ######   # @Last Modified by:   revers
 #  ####### #     # #     # #     #  #       #      # #        #
-#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-08-08 14:30:09
+#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-11-06 16:13:38
 ###############################################################
 
 invokables:
 	filter_data_timeline_template : Data/Template/FilterDataTimelineTemplate
+	filter_data_miniature_template : Data/Template/FilterDataMiniatureTemplate
 
 	filter_data_search_template	: Data/Template/FilterDataSearchTemplate
 	filter_data_view_template	: Data/Template/FilterDataViewTemplate
