@@ -7,73 +7,45 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-28 22:25:48
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-08 03:03:21
 **************************************************************/
 
 div.filter.view {
 
-	div.parent.view {
-		div.picture {
-			width: 160px;
-			height: 190px;
-			background-color: rgba($primary_color, 0.7);
-			background-size: 100% 100%; 
-			display: inline-block;
-		}
-
-		div.nameProfile {
-			display: inline-block;
-			vertical-align: top;
-			margin-left: 20px;
-			font-size: 26px;
-			font-weight: bold;
-		}
+	div.picture {
+		display: block;
+		width: 160px;
+		height: 160px;
+		background-size : cover;
+		background-repeat: no-repeat;
+		background-color : rgba($primary_color, 0.8);
+		border: 2px solid $secondary_color;
+		border-radius: 50%;
+		margin: 20px auto;
 	}
 
-	div.more {
+	div.explain {
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
 		width: 100%;
-		clear: both;
-		padding: 0px;
-		margin: 0px;
+		padding-bottom: 20px;
 
-		&:after, &:before {
-			content:"";
-			display:table;
-		}
-
-		&:after {
-			clear:both;
-		}
-
-		div.skilllinks, div.challengelinks {
+		div.name {
 			display: block;
-			padding: 10px;
-			width: 49%;
-			float: left;
-			margin: 1%;
-			box-sizing: border-box;
 			vertical-align: top;
+			color: $primary_color;
+			font-size: 64px;
+			font-weight: 200;
+		}
 
-			&:first-child {
-				margin-left: 0%;
-			}
-
-			&:last-child {
-				margin-right: 0%;
-			}
-
-			h2.title {
-				margin: 0px 10px 10px 0px;
-
-				&:after {
-					width: 100%;
-					display: block;
-					height : 1px;
-					background-color: darken($white_color, 10);
-					margin : 10px 0px;
-					content : '';
-				}		
-			}
+		p.description {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			color : darken($white_color, 35);
+			width: 800px;
 		}
 	}
 }

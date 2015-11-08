@@ -7,13 +7,28 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-03 14:09:18
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-08 03:12:10
 **************************************************************/
 
 class FilterDataTemplateViewView extends NamedDataDataTemplateViewView {
 
 	public _class = 'filter';
 	public _elementType = 'Filter';
+
+	public getPicture : function (parent) {
+		var picture = undefined;
+		if (parent instanceof BaseUserDataMainEntity)
+			picture = parent.getPicture();
+		else if (parent instanceof InstituteDataMainEntity)
+			picture = parent.getLogo();
+		return picture;
+	}
+
+	public getDescription : function (entity) {
+		if (entity && entity.getParent())
+			return entity.getParent().getDescription();
+		return null;
+	}
 
 	public display : function () {
 		var router = serviceLocator.get('Router');
@@ -24,25 +39,26 @@ class FilterDataTemplateViewView extends NamedDataDataTemplateViewView {
 
 		if (!entity)
 			return (<div>Filter not loaded</div>);
-		else if (parent.getPicture() != undefined)
-			picture = this.getUrlAsset(parent.getPicture());
+		else if (this.getPicture(parent) != undefined)
+			picture = this.getUrlAsset(this.getPicture(parent));
 		style['backgroundImage'] = 'url("'+ picture +'")'; 
-
-		return <div className="filter view">
-			<div className="actions">
-				<i className="fa fa-tasks" data-url={router.entityRoute(entity, 'skilllink')} onClick={this.link}></i>
-				<i className="fa fa-pencil" data-url={this.getUrlEdit()} onClick={this.link}></i>
-			</div>
-			<div className="parent view">
+		return <div className={['filter', 'view', this.getClass()].join(' ')}>
+			<div className="container">
 				<div className="picture" style={style}></div>
-				<div className="nameProfile">
-					{parent.getFirstname() +' '+ parent.getLastname()}
+				<div className="explain">
+					<div className="name">
+						{entity.getName()}
+					</div>
+					<p className="description">{this.getDescription(entity)}</p>
 				</div>
-			</div>
-			<div className="skilllinks">
-				{ this.getHelper('DisplaySkillLink', { entity : entity }) }
+				{this.displayContents()}
 			</div>
 		</div>;
+	}
+
+
+	public displayContents : function () {
+		return <div className="contents"></div>;
 	}
 
 }
