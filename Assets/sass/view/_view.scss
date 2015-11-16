@@ -7,21 +7,25 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-08 03:03:21
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-10 02:23:24
 **************************************************************/
 
 div.filter.view {
 
-	div.picture {
+	div.miniature {
 		display: block;
 		width: 160px;
 		height: 160px;
-		background-size : cover;
-		background-repeat: no-repeat;
-		background-color : rgba($primary_color, 0.8);
-		border: 2px solid $secondary_color;
-		border-radius: 50%;
 		margin: 20px auto;
+		border: 2px solid darken($white_color, 20);
+
+		&.baseuser {
+			border: 2px solid $secondary_color;
+		}
+
+		&.institute {
+			border: 2px solid $primary_color;
+		}
 	}
 
 	div.explain {
@@ -45,7 +49,7 @@ div.filter.view {
 			margin-right: auto;
 			text-align: center;
 			color : darken($white_color, 35);
-			width: 800px;
+			width: 80%;
 		}
 	}
 }

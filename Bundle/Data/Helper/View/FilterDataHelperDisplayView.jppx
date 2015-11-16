@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-29 02:05:37
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-10 16:42:04
 **************************************************************/
 
 class FilterDataHelperDisplayView extends MasterHelperView {
@@ -53,10 +53,8 @@ class FilterDataHelperDisplayView extends MasterHelperView {
 		var entity = this._template.getEntity();
 
 		return keys.map(function (i) {
-			return <div>
-				<div>
-					{ self.getHelper('DisplaySkillLink', { entity : entities[i] }) }
-				</div>
+			return <div key={i}>
+				{ self.getHelper('DisplaySkillLink', { entity : entities[i] }) }
 			</div>
 		});
 	}

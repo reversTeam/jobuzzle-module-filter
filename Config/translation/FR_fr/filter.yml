@@ -7,10 +7,12 @@
 #       ## #     # #     # #     #    #       #    # #     #  #
 #       ## #     # #     # #     #   #       #     # ######   # @Last Modified by:   revers
 #  ####### #     # #     # #     #  #       #      # #        #
-#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-09-19 20:41:53
+#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-11-09 14:15:46
 ###############################################################
 
-view : '{{url}}'
-update : '{{url}}'
-Filters: Filtres
+page:
+	title:
+		view : '{{url}}'
+		update : '{{url}}'
+		Filters: Filtres
 levels: Etudiant
