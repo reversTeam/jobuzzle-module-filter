@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-03 16:39:33
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-09 11:20:18
 **************************************************************/
 
 class FilterDataTemplateTimelineView extends NamedDataDataTemplateTimelineView {
@@ -21,7 +21,7 @@ class FilterDataTemplateTimelineView extends NamedDataDataTemplateTimelineView {
 		var searchTemplate = this.getSearchTemplate();
 		
 		if (parent) {
-			var content = <div className="filter timeline">
+			var content = <div className="filter timeline" onClick={this.link} data-url={this.getUrl()}>
 				<div className="parent miniature" data-url={parentUrl} onClick={this.link}>
 					{ parent ? parent.displayMiniature() : null }
 				</div>

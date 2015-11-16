@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-06 15:46:29
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-10 02:24:33
 **************************************************************/
 
 div.filter.timeline {
@@ -58,6 +58,10 @@ div.filter.timeline {
 
 	div.parent {
 		display : inline-block;
+
+		div.miniature.institute {
+			border: 2px solid $primary_color;
+		}
 	}
 
 	div.parent.name {
@@ -74,14 +78,33 @@ div.filter.timeline {
 	}
 
 	div.description {
-		height: 125px;
-		overflow: hidden;
 
-		div.skilllinkContent {
-			opacity: 0;
-			@include animation('fadeIn 1s linear both');
+		p.text {
+			text-align: center;
+			vertical-align: top;
+			color : darken($white_color, 40);
+			padding: 0px 10px 20px 10px;
+			height: 115px;
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			overflow: hidden;
+			word-wrap: break-word;
+			-o-text-overflow: ellipsis;
+  			text-overflow: ellipsis;
+  			margin: 9px;
 		}
+
 	}
+
+	// div.description {
+	// 	height: 125px;
+	// 	overflow: hidden;
+
+	// 	div.skilllinkContent {
+	// 		opacity: 0;
+	// 		@include animation('fadeIn 1s linear both');
+	// 	}
+	// }
 
 	div.centerButton {
 		margin-top : 10px;

@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-08 03:12:10
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-10 02:19:13
 **************************************************************/
 
 class FilterDataTemplateViewView extends NamedDataDataTemplateViewView {
@@ -24,6 +24,10 @@ class FilterDataTemplateViewView extends NamedDataDataTemplateViewView {
 		return picture;
 	}
 
+	public getName : function (entity) {
+		return entity.getName();
+	}
+
 	public getDescription : function (entity) {
 		if (entity && entity.getParent())
 			return entity.getParent().getDescription();
@@ -34,20 +38,16 @@ class FilterDataTemplateViewView extends NamedDataDataTemplateViewView {
 		var router = serviceLocator.get('Router');
 		var entity = this.state['entity'];
 		var parent = entity.getParent();
-		var picture = '';
-		var style = {};
 
 		if (!entity)
 			return (<div>Filter not loaded</div>);
-		else if (this.getPicture(parent) != undefined)
-			picture = this.getUrlAsset(this.getPicture(parent));
-		style['backgroundImage'] = 'url("'+ picture +'")'; 
 		return <div className={['filter', 'view', this.getClass()].join(' ')}>
 			<div className="container">
-				<div className="picture" style={style}></div>
+				{this.displayActions(entity)}
+				{parent.displayMiniature()}
 				<div className="explain">
 					<div className="name">
-						{entity.getName()}
+						{this.getName(entity)}
 					</div>
 					<p className="description">{this.getDescription(entity)}</p>
 				</div>
