@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-03 13:56:29
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-27 15:45:50
 **************************************************************/
 
 class FilterDataFieldsetForm extends NamedDataDataFieldsetForm {
@@ -51,7 +51,7 @@ class FilterDataFieldsetForm extends NamedDataDataFieldsetForm {
 		if (this['_salaryMinInput'] == undefined) {
 			this['_salaryMinInput'] = {};
 
-			this['_salaryMinInput']['required'] = false;
+			this['_salaryMinInput']['required'] = true;
 
 			this['_salaryMinInput']['filters'] = [];
 			this['_salaryMinInput']['filters'][0] = {}

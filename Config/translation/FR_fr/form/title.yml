@@ -7,10 +7,11 @@
 #       ## #     # #     # #     #    #       #    # #     #  #
 #       ## #     # #     # #     #   #       #     # ######   # @Last Modified by:   revers
 #  ####### #     # #     # #     #  #       #      # #        #
-#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-09-20 12:03:32
+#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-11-21 15:16:19
 ###############################################################
 
 filter :
 	create: 'Créer un filtre'
 	edit: 'Editer un filtre'
 	search: 'Rechercher des filtres'
+	delete: Supprimer le filtre

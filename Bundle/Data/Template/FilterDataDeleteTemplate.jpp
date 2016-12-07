@@ -7,13 +7,13 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-20 18:44:39
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-21 15:31:50
 **************************************************************/
 
 class FilterDataDeleteTemplate extends NamedDataDataDeleteTemplate {
 
 	public _viewClassName = 'FilterDataTemplateDeleteView';
 	public _type = 'Filter';
-	public _route = 'filter';
+	public _serviceName = 'filter_data_main_service';
 
 }

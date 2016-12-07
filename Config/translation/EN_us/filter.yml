@@ -7,7 +7,7 @@
 #       ## #     # #     # #     #    #       #    # #     #  #
 #       ## #     # #     # #     #   #       #     # ######   # @Last Modified by:   revers
 #  ####### #     # #     # #     #  #       #      # #        #
-#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-11-09 14:16:01
+#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-11-21 15:16:42
 ###############################################################
 
 page:
@@ -15,3 +15,8 @@ page:
 		view : '{{url}}'
 		Filters: Filters
 levels : Student
+
+view:
+	actions:
+		edit: Edit Filters
+		delete: Delete filter
